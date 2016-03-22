@@ -32,5 +32,9 @@ git branch <name> 创建分支
 git merge <name> 合并到当前分支
 
 git stash Bug 分支
+git checkout -b t 创建新分支
+修改··提交··切换master分支··合并t分支··删除t分支
 stash apply 恢复，但是恢复后，stash内容并不删除
 stash pop 恢复的同时把stash内容也删了
+
+
