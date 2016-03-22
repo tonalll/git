@@ -38,3 +38,15 @@ stash apply 恢复，但是恢复后，stash内容并不删除
 stash pop 恢复的同时把stash内容也删了
 
 git branch -D <name> 强行删除未合并的分支
+
+git tag v1 创建v1标签
+git tag v1 6224937 创建commit id是6224937的标签v1
+git tag -a v0.1 -m "version 0.1 released" 3628164 创建commit id是6224937的标签v1 带有说明的标签
+git show 查看标签说明 
+git tag -d v1 删除v1标签
+git push origin v1 推送标签到远程仓库
+git push origin --tags 推送所有标签到远程仓库
+删除远程标签
+git tag -d v1 先删除本地标签
+git push origin :refs/tags/v1 再删除远程标签
+
