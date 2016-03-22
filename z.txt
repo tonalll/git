@@ -37,4 +37,4 @@ git checkout -b t 创建新分支
 stash apply 恢复，但是恢复后，stash内容并不删除
 stash pop 恢复的同时把stash内容也删了
 
-
+git branch -D <name> 强行删除未合并的分支
