@@ -31,4 +31,6 @@ git branch -d dev 删除dev分支
 git branch <name> 创建分支
 git merge <name> 合并到当前分支
 
-zz
+git stash Bug 分支
+stash apply 恢复，但是恢复后，stash内容并不删除
+stash pop 恢复的同时把stash内容也删了
