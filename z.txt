@@ -24,30 +24,3 @@ git reset HEAD z.txt 操作缓存区。缓存区内容会丢失。 从仓库当�
 rm test.txt 删除文件
 git rm test.txt 删除文件 操作工作区，直接放入缓存。
 
-git checkout -b dev 创建并切换到dev分支
-git checkout master 切换到master分支
-git branch 查看分支情况
-git branch -d dev 删除dev分支
-git branch <name> 创建分支
-git merge <name> 合并到当前分支
-
-git stash Bug 分支
-git checkout -b t 创建新分支
-修改··提交··切换master分支··合并t分支··删除t分支
-stash apply 恢复，但是恢复后，stash内容并不删除
-stash pop 恢复的同时把stash内容也删了
-
-git branch -D <name> 强行删除未合并的分支
-
-git tag v1 创建v1标签
-git tag v1 6224937 创建commit id是6224937的标签v1
-git tag -a v0.1 -m "version 0.1 released" 3628164 创建commit id是6224937的标签v1 带有说明的标签
-git show 查看标签说明 
-git tag -d v1 删除v1标签
-git push origin v1 推送标签到远程仓库
-git push origin --tags 推送所有标签到远程仓库
-删除远程标签
-git tag -d v1 先删除本地标签
-git push origin :refs/tags/v1 再删除远程标签
-git tag # 在控制台打印出当前仓库的所有标签
-
