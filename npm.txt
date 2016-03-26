@@ -1,0 +1,7 @@
+默认配置
+C:\Users\Administrator\.npmrc
+自定义配置在
+当前目录下.npmrc文件 userconfig字段对应地址
+例如userconfig = c:\Users\Administrator\.config\how-to-npm\npmrc
+
+

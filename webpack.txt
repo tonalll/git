@@ -1,0 +1,63 @@
+webpack 执行一次开发时的编译
+webpack -p 执行一次生成环境的编译（压缩）
+webpack --watch 在开发时持续监控增量编译（很快）
+webpack -d 让他生成SourceMaps
+webpack --progress 显示编译进度
+webpack --colors 显示静态资源的颜色
+webpack --sort-modules-by, --sort-chunks-by, --sort-assets-by 将modules/chunks/assets进行列表排序
+webpack --display-chunks 展示编译后的分块
+webpack --display-reasons 显示更多引用模块原因
+webapck --display-error-details 显示更多报错信息
+
+entry输入文件路径
+output输出文件路径
+//.css 文件使用 style-loader 和 css-loader 来处理
+{ test: /\.css$/, loader: 'style-loader!css-loader' },
+//.js 文件使用 jsx-loader 来编译处理
+{ test: /\.js$/, loader: 'jsx-loader?harmony' },
+//.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+{ test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+//图片文件使用 url-loader 来处理，小于8kb的直接转为base64
+{ test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+"-loader"其实是可以省略不写的，多个loader之间用“!”连接起来。
+
+loader: 'babel-loader?presets[]=es2015&presets[]=react',
+等同于
+loader: 'babel-loader',
+                query: {
+                    //添加两个presents 使用这两种presets处理js或者jsx文件
+                    presets: ['es2015', 'react']
+                }
+
+test: /\.css$/,
+                exclude: "../node_modules/",
+                loader: 'style-loader!css-loader'
+
+
+
+
+
+
+module.exports = {
+  entry: {
+    bundle1: './main1.js',
+    bundle2: './main2.js'
+  },
+  output: {
+    filename: '[name].js'
+  }
+};
+
+module: {
+        //加载器配置
+        loaders: [
+            //.css 文件使用 style-loader 和 css-loader 来处理
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            //.js 文件使用 jsx-loader 来编译处理
+            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            //.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+            //图片文件使用 url-loader 来处理，小于8kb的直接转为base64
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+        ]
+    }
