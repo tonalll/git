@@ -53,6 +53,11 @@ git push origin :refs/tags/v1 再删除远程标签
 git tag # 当前仓库的所有标签
 git tag 当前分支的所有标签
 
+关联本地库到远程
+git remote add origin https://github.com/tonalll/node.git
+本地推送到远程
+git push -u origin master
+
 git update-index --assume-unchanged /path/to/file       #忽略跟踪
 
 git update-index --no-assume-unchanged /path/to/file  #恢复跟踪

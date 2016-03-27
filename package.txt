@@ -1,3 +1,7 @@
+--save-dev保存到devDependencies
+ --save 保存到dependencies
+
+
 {
   //name：必须，标识；不能包含node，js等字段；将会是url的一部分
   //命令行的参数，目录名。所以不能移点号和下划线开头
@@ -33,7 +37,7 @@
   },
   /*
   *dependencies: 当前包所依赖的其他包。即生产环境
-  *devDependencies: 外部测试或文档框架。即测试环境依赖
+  *devDependencies: 外部测试或文档框架。即测试环境依赖 开发环境
   *peerDependencies: 兼容性依赖，适于插件。插件需求的约束越弱越好。如：
   *"peerDependencies":{
   *     "tea": "2.x" //确保2.x的版本不会爆错
